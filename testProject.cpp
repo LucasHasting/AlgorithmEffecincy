@@ -24,6 +24,15 @@ void Random(T *array, int size, int max){
     }
 }
 
+template <class T.
+void SemiRandom(T *array, int size){
+    for(int i = 0; i < size/2; i++){
+	    T temp = array[i];
+	    array[i] = array[size/2 + i];
+	    array[size/2 + i] = temp;
+    }
+}
+
 template <class T>
 void Asscending(T *array, int size){
     for(int i = 0; i < size; i++){
