@@ -5,13 +5,22 @@
 #include "countSort1.cpp"
 using namespace std;
 
-void dataWrite(string test_type, string test_set, int max, double time)
+void dataWrite(string test_type, int max, double time)
 {
     ofstream outfile;
     outfile.open("data.csv", ios::app);
-    outfile << test_type << "," << test_set << "," << max << "," << time;
+    outfile << test_type << "," << max << "," << time;
     outfile << endl;
     outfile.close();
+}
+
+template <class T>
+void SemiRandom(T *array, int size){
+    for(int i = 0; i < size/2; i++){
+	    T temp = array[i];
+	    array[i] = array[size/2 + i];
+	    array[size/2 + i] = temp;
+    }
 }
 
 template <class T>
@@ -24,24 +33,15 @@ void Random(T *array, int size, int max){
     }
 }
 
-template <class T.
-void SemiRandom(T *array, int size){
-    for(int i = 0; i < size/2; i++){
-	    T temp = array[i];
-	    array[i] = array[size/2 + i];
-	    array[size/2 + i] = temp;
-    }
-}
-
 template <class T>
-void Asscending(T *array, int size){
+void Ascending(T *array, int size){
     for(int i = 0; i < size; i++){
             array[i] = i + 1;
     }
 }
 
 template <class T>
-void Decending(T *array, int size){
+void Descending(T *array, int size){
     for(int i = size - 1, j = 0; j < size; i--, j++){
             array[i] = j + 1;
     }
@@ -54,11 +54,13 @@ double test(T *array, int size, int max, string type = "Random")
     if (type == "Random")
     	Random<T>(array, size, max);
     else if (type == "Ascending")
-	Asscending<T>(array, size);
+        Ascending<T>(array, size);
     else if (type == "Descending")
-	Decending<T>(array, size);
+        Descending<T>(array, size);
+    else if (type == "Semi-Random")
+        SemiRandom<T>(array, size);
     else
-	return 0;
+        return 0;
     t1 = clock();
 
     //test algorithm
@@ -77,7 +79,7 @@ int main()
     //35750000
     ofstream outfile;
     outfile.open("data.csv");
-    outfile << "test_type,test_set,max,time" << endl;
+    outfile << "test_type,max,time" << endl;
     outfile.close();
     int max = 35750000;
     int size = 10;//max;
@@ -86,11 +88,14 @@ int main()
 
     //int
     //size with size
-    for (int temp_size = size; temp_size > 0; temp_size -= 250000){
+    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 250000, i++){
     int *arr = new int[temp_size];
-    dataWrite("Random", "1", temp_size, test<int>(arr, temp_size, temp_size));
-    dataWrite("Ascending", "1", temp_size, test<int>(arr, temp_size, 0, "Ascending"));
-    dataWrite("Descending", "1", temp_size, test<int>(arr, temp_size, 0, "Descending"));
+    dataWrite("Random", temp_size, test<int>(arr, temp_size, temp_size));
+    dataWrite("Ascending", temp_size, test<int>(arr, temp_size, 0, "Ascending"));
+    dataWrite("Descending", temp_size, test<int>(arr, temp_size, 0, "Descending"));
+    dataWrite("Semi-Random", temp_size, test<int>(arr, temp_size, 0, "Semi-Random"));
+    dataWrite("Random-Max", max+i*2, test<int>(arr, temp_size, max+i*2));
+    dataWrite("Random-Min", 10, test<int>(arr, temp_size, 10));
     cout << ".";
 
     delete [] arr;
@@ -102,84 +107,4 @@ int main()
     cout << "Total Time (Seconds): " << (diff / CLOCKS_PER_SEC) << endl;
     cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl << endl;
 
-    //size with max
-    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 250000, i++){
-    int *arr = new int[temp_size];
-    dataWrite("Random", "2", max+i*2, test<int>(arr, temp_size, max+i*2));
-    dataWrite("Ascending", "2", temp_size, test<int>(arr, temp_size, 0, "Ascending"));
-    dataWrite("Descending", "2", temp_size, test<int>(arr, temp_size, 0, "Descending"));
-    cout << ".";
-
-    delete [] arr;
-    }
-
-    cout << "Done" << endl;
-
-    t3 = clock();
-    diff = float(t3) - float(t2);
-    cout << "Total Time: " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl << endl;
-
-    //size with small max
-    max = 10;
-    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 250000, i++){
-    int *arr = new int[temp_size];
-    dataWrite("Random", "3", max, test<int>(arr, temp_size, max));
-    dataWrite("Ascending", "3", temp_size, test<int>(arr, temp_size, 0, "Ascending"));
-    dataWrite("Descending", "3", temp_size, test<int>(arr, temp_size, 0, "Descending"));
-    cout << ".";
-    cout << endl;
-
-    delete [] arr;
-    }
-
-    cout << "Done" << endl;
-
-    t4 = clock();
-    diff = float(t4) - float(t3);
-    cout << "Total Time: " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl << endl;
-
-    t4 = clock();
-    diff = float(t4) - float(t1);
-    cout << "Total Overall Time: " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl << endl;
-    /*
-    //double
-    //size with size
-    for (int temp_size = size; temp_size > 0; temp_size--){
-    double *arr = new double[temp_size];
-    cout << test<double>(arr, temp_size, size) << endl;
-    cout << test<double>(arr, temp_size, 0, "Asscending") << endl;
-    cout << test<double>(arr, temp_size, 0, "Decending") << endl;
-    cout << "Size: " << temp_size << endl;
-    cout << endl;
-
-    delete [] arr;
-    }
-
-    t4 = clock();
-    float diff (float(t2) - float(t1));
-    cout << "Total Time (Seconds): " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl;
-    cout << "Total Time (Hours): " << (((diff / CLOCKS_PER_SEC) / 60) / 60) << endl << endl;
-
-    //size with max
-    for (int temp_size = size; temp_size > 0; temp_size--){
-    double *arr = new double[temp_size];
-    cout << test<double>(arr, temp_size, max) << endl;
-    cout << test<double>(arr, temp_size, 0, "Asscending") << endl;
-    cout << test<double>(arr, temp_size, 0, "Decending") << endl;
-    cout << "Size: " << temp_size << endl;
-    cout << endl;
-
-    delete [] arr;
-    }
-
-    t5 = clock();
-    diff = float(t2) - float(t1);
-    cout << "Total Time: " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl;
-    cout << "Total Time (Hours): " << (((diff / CLOCKS_PER_SEC) / 60) / 60) << endl;
-    */
 }
