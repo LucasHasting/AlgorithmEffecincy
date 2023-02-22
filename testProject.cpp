@@ -5,11 +5,11 @@
 #include "countSort1.cpp"
 using namespace std;
 
-void dataWrite(string test_type, int max, double time)
+void dataWrite(string test_type, int size, int max, double time)
 {
     ofstream outfile;
     outfile.open("data.csv", ios::app);
-    outfile << test_type << "," << max << "," << time;
+    outfile << test_type << "," << max << "," << size << "," << time;
     outfile << endl;
     outfile.close();
 }
@@ -75,27 +75,27 @@ int main()
 {
     //2147483647
     //1073741823
-    //35791396 - highest working number
+    //35791396/153250000 - highest working number
     //35750000
     ofstream outfile;
     outfile.open("data.csv");
-    outfile << "test_type,max,time" << endl;
+    outfile << "test_type,max,size,time" << endl;
     outfile.close();
-    int max = 35750000;
-    int size = 10;//max;
+    int max = 150000000;
+    int size = max;
     clock_t t1, t2, t3, t4, t5;
     t1 = clock();
 
     //int
     //size with size
-    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 250000, i++){
+    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 1500000/*250000*/, i++){
     int *arr = new int[temp_size];
-    dataWrite("Random", temp_size, test<int>(arr, temp_size, temp_size));
-    dataWrite("Ascending", temp_size, test<int>(arr, temp_size, 0, "Ascending"));
-    dataWrite("Descending", temp_size, test<int>(arr, temp_size, 0, "Descending"));
-    dataWrite("Semi-Random", temp_size, test<int>(arr, temp_size, 0, "Semi-Random"));
-    dataWrite("Random-Max", max+i*2, test<int>(arr, temp_size, max+i*2));
-    dataWrite("Random-Min", 10, test<int>(arr, temp_size, 10));
+    dataWrite("Random", temp_size, temp_size, test<int>(arr, temp_size, temp_size));
+    dataWrite("Ascending", temp_size, temp_size, test<int>(arr, temp_size, 0, "Ascending"));
+    dataWrite("Descending", temp_size, temp_size, test<int>(arr, temp_size, 0, "Descending"));
+    dataWrite("Semi-Random", temp_size, temp_size, test<int>(arr, temp_size, 0, "Semi-Random"));
+    dataWrite("Random-Max", temp_size, max+i*2, test<int>(arr, temp_size, max+i*2));
+    dataWrite("Random-Min", temp_size, 10, test<int>(arr, temp_size, 10));
     cout << ".";
 
     delete [] arr;
