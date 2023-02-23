@@ -16,11 +16,11 @@ File Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
 using namespace std;
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
+Function Name: dataWrite
+Function Description: Appends the parameters to a file clalled data.csv
+Incoming: test_type, size, max, time
+Outgoing: None
+Return: None
 Function Contribution: Krutivas Pradhan
 */
 void dataWrite(string test_type, int size, int max, double time)
@@ -33,11 +33,11 @@ void dataWrite(string test_type, int size, int max, double time)
 }
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
+Function Name: Ascending
+Function Description: Puts number in the array from 1-size in ascending order
+Incoming: array, size
+Outgoing: array
+Return: None
 Function Contribution: Lucas Hasting
 */
 template <class T>
@@ -48,11 +48,11 @@ void Ascending(T *array, int size){
 }
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
+Function Name: Descending
+Function Description: Puts number in the array from 1-size in descending order
+Incoming: array, size
+Outgoing: array
+Return: None
 Function Contribution: Lucas Hasting
 */
 template <class T>
@@ -63,11 +63,11 @@ void Descending(T *array, int size){
 }
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
+Function Name: SemiRandom
+Function Description: Puts numbers in the array in semi-random order
+Incoming: array, size
+Outgoing: array
+Return: None
 Function Contribution: Ethan Nix
 */
 template <class T>
@@ -81,12 +81,12 @@ void SemiRandom(T *array, int size){
 }
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
-Function Contribution: Ethan Nix
+Function Name: Random
+Function Description: Puts numbers in the array in random order
+Incoming: array, size
+Outgoing: array
+Return: None
+Function Contribution: Lucas Hasting
 */
 template <class T>
 void Random(T *array, int size, int max){
@@ -99,11 +99,11 @@ void Random(T *array, int size, int max){
 }
 
 /*
-Function Name:
-Function Description:
-Incoming:
-Outgoing:
-Return:
+Function Name: test
+Function Description: test the speed of the counting sort
+Incoming: array, size, max, type
+Outgoing: array
+Return: diff / CLOCKS_PER_SEC
 Function Contribution: Lucas Hasting
 */
 template <class T>
