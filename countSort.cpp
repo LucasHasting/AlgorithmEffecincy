@@ -1,9 +1,25 @@
-//reference: https://www.tutorialspoint.com/cplusplus-program-to-implement-counting-sort
+/*
+Names: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+Course: CS 355
+Assignment: Assignment 7
+Date: 2/23/2023
+Program Description: Create a function for the count sort
+File Name: countSort.cpp
+File Contribution: Copied and Pasted from references, further edited by Lucas Hasting
+reference 1: https://www.tutorialspoint.com/cplusplus-program-to-implement-counting-sort
+reference 2: https://www.programiz.com/dsa/counting-sort
+*/
 
 #include<iostream>
-#include<algorithm>
 using namespace std;
 
+/*
+Function Name: display
+Function Description: displays the array
+Incoming: array, size
+Outgoing: None
+Return: None
+*/
 template <class T>
 void display(T *array, int size) {
    for(int i = 0; i < size; i++)
@@ -11,6 +27,13 @@ void display(T *array, int size) {
    cout << endl;
 }
 
+/*
+Function Name: getMax
+Function Description: returns the max number from an array
+Incoming: array, size
+Outgoing: max
+Return: max
+*/
 template <class T>
 int getMax(T *array, int size) {
    T max = array[0];
@@ -21,10 +44,17 @@ int getMax(T *array, int size) {
    return max; //the max element from the array
 }
 
+/*
+Function Name: countSort
+Function Description: The count sort algorithm
+Incoming: array, size
+Outgoing: array
+Return: None
+*/
 template <class T>
 void countSort(T *array, int size) {
-   T *output = new T[size];
-   T max = getMax<T>(array, size);
+   T *output = new T[size];     //create temp array
+   T max = getMax<T>(array, size); //get max number from array
    T *count = new T[max+1];     //create count array (max+1 number of elements)
 
   // Initialize count array with all zeros.

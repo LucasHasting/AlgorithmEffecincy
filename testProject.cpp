@@ -1,3 +1,13 @@
+/*
+Names: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+Course: CS 355
+Assignment: Assignment 7
+Date: 2/23/2023
+Program Description: Test the countingSort function
+File Name: testProject.cpp
+File Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+*/
+
 #include <iostream>
 #include <ctime>
 #include <time.h>
@@ -6,13 +16,13 @@
 using namespace std;
 
 /*
-FUNCTION NAME: dataWrite
-FUNCTION DESCRIPTION: Wite the data to a data.csv file
-INPUT: string test_type, int size, int max, double time
-OUTPUT:NA
-RETURN:NA
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Krutivas Pradhan
 */
-
 void dataWrite(string test_type, int size, int max, double time)
 {
     ofstream outfile;
@@ -22,6 +32,14 @@ void dataWrite(string test_type, int size, int max, double time)
     outfile.close();
 }
 
+/*
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Lucas Hasting
+*/
 template <class T>
 void Ascending(T *array, int size){
     for(int i = 0; i < size; i++){
@@ -29,6 +47,14 @@ void Ascending(T *array, int size){
     }
 }
 
+/*
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Lucas Hasting
+*/
 template <class T>
 void Descending(T *array, int size){
     for(int i = size - 1, j = 0; j < size; i--, j++){
@@ -36,6 +62,14 @@ void Descending(T *array, int size){
     }
 }
 
+/*
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Ethan Nix
+*/
 template <class T>
 void SemiRandom(T *array, int size){
     Ascending(array, size);
@@ -46,6 +80,14 @@ void SemiRandom(T *array, int size){
     }
 }
 
+/*
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Ethan Nix
+*/
 template <class T>
 void Random(T *array, int size, int max){
     srand(time(0));
@@ -56,9 +98,18 @@ void Random(T *array, int size, int max){
     }
 }
 
+/*
+Function Name:
+Function Description:
+Incoming:
+Outgoing:
+Return:
+Function Contribution: Lucas Hasting
+*/
 template <class T>
 double test(T *array, int size, int max, string type = "Random")
 {
+    //enter data into the array
     clock_t t1, t2;
     if (type == "Random")
     	Random<T>(array, size, max);
@@ -76,28 +127,27 @@ double test(T *array, int size, int max, string type = "Random")
     countSort<T>(array, size);
 
     t2 = clock();
+
+    //time function
     float diff (float(t2) - float(t1));
     return diff / CLOCKS_PER_SEC;
 }
 
+/*
+Driver Function
+Function Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+*/
 int main()
 {
-    //2147483647
-    //1073741823
-    //35791396/153250000 - highest working number
-    //35750000
     ofstream outfile;
     outfile.open("data.csv");
     outfile << "test_type,max,size,time" << endl;
     outfile.close();
     int max = 150000000;
     int size = max;
-    clock_t t1, t2, t3, t4, t5;
-    t1 = clock();
 
-    //int
-    //size with size
-    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 1500000/*250000*/, i++){
+    //tests the data and writes it to data.csv
+    for (int temp_size = size, i = 0; temp_size > 0; temp_size -= 1500000, i++){
     int *arr = new int[temp_size];
     dataWrite("Random", temp_size, temp_size, test<int>(arr, temp_size, temp_size));
     dataWrite("Ascending", temp_size, temp_size, test<int>(arr, temp_size, 0, "Ascending"));
@@ -105,15 +155,15 @@ int main()
     dataWrite("Semi-Random", temp_size, temp_size, test<int>(arr, temp_size, 0, "Semi-Random"));
     dataWrite("Random-Max", temp_size, max+i*2, test<int>(arr, temp_size, max+i*2));
     dataWrite("Random-Min", temp_size, 10, test<int>(arr, temp_size, 10));
+
+    //indicate an iteration has finished
     cout << ".";
 
+    //delete array
     delete [] arr;
     }
+
+    //indicate the testing is done
     cout << "Done" << endl;
-
-    t2 = clock();
-    double diff = float(t2) - float(t1);
-    cout << "Total Time (Seconds): " << (diff / CLOCKS_PER_SEC) << endl;
-    cout << "Total Time (Minutes): " << ((diff / CLOCKS_PER_SEC) / 60) << endl << endl;
-
+    return 0;
 }
