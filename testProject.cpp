@@ -5,6 +5,14 @@
 #include "countSort.cpp"
 using namespace std;
 
+/*
+FUNCTION NAME: dataWrite
+FUNCTION DESCRIPTION: Wite the data to a data.csv file
+INPUT: string test_type, int size, int max, double time
+OUTPUT:NA
+RETURN:NA
+*/
+
 void dataWrite(string test_type, int size, int max, double time)
 {
     ofstream outfile;
