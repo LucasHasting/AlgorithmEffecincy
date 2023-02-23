@@ -2,7 +2,7 @@
 #include <ctime>
 #include <time.h>
 #include <fstream>
-#include "countSort1.cpp"
+#include "countSort.cpp"
 using namespace std;
 
 void dataWrite(string test_type, int size, int max, double time)
@@ -15,7 +15,22 @@ void dataWrite(string test_type, int size, int max, double time)
 }
 
 template <class T>
+void Ascending(T *array, int size){
+    for(int i = 0; i < size; i++){
+            array[i] = i + 1;
+    }
+}
+
+template <class T>
+void Descending(T *array, int size){
+    for(int i = size - 1, j = 0; j < size; i--, j++){
+            array[i] = j + 1;
+    }
+}
+
+template <class T>
 void SemiRandom(T *array, int size){
+    Ascending(array, size);
     for(int i = 0; i < size/2; i++){
 	    T temp = array[i];
 	    array[i] = array[size/2 + i];
@@ -30,20 +45,6 @@ void Random(T *array, int size, int max){
     for(int i = 0; i < size; i++){
             T random = rand() % max;
             array[i] = random;
-    }
-}
-
-template <class T>
-void Ascending(T *array, int size){
-    for(int i = 0; i < size; i++){
-            array[i] = i + 1;
-    }
-}
-
-template <class T>
-void Descending(T *array, int size){
-    for(int i = size - 1, j = 0; j < size; i--, j++){
-            array[i] = j + 1;
     }
 }
 
