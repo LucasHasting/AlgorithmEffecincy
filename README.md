@@ -1,6 +1,5 @@
 # Count Sort Analysis
-Project was created in my Data Structures and Algorithms class.  
-Project was done with the help of Ethan Nix and Krutivas Pradhan.  
+Project was created in my CS 355 (Data Structures and Algorithms) class. The prject was to provide an analysis of the count sort algorithm including its time complexity and a visualization of the speed of the algorithm. The results of this analysis can be found in [Algorithm Efficiency.pptx](). The project was done with the help of Ethan Nix and Krutivas Pradhan.  
 
 ## Table of Contents
 - [Project-Installation](#project-installation)
