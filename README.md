@@ -129,4 +129,4 @@ WIP
 
 ## Script-Overview
 
-Analyze.R: generates graphs of the data which can be found in the Graphs directory.
+Analyze.R: generates graphs of the data which can be found in the [Graphs]() directory.
