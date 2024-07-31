@@ -9,6 +9,8 @@ Project was done with the help of Ethan Nix and Krutivas Pradhan.
 
 ## Project-Installation
 
+R and C++ are both needed for this project, see instructions below for both of those.
+
 ### Option 1: using [git](https://git-scm.com/downloads)
 1. Clone the repository:
 
@@ -73,18 +75,15 @@ count_sort.exe
 ```
 
 ## Program-Usage
-The program is a command line, menu based, user interface. By entering the number associated with an option it will perform a certain operation. The program has multiple menus, the first being the main menu where you can sign in, create an account, or exit the program. When creating an account it asks for the username and password, and the password is hidden using *. Upon successfull login you have the option to change the accounts username and password, along with deleteing the account, or you can choose to sign out.
+The program runs a stress test on the Count Sort algorithm and records the results in the [data.csv]() file.
 
 ## Program-Example
 
-![EXAMPLE](examples/example1.png)  
-![EXAMPLE](examples/example2.png)  
+WIP
 
 ## Program-Overview
-countSort.cpp contains the count sort algorithm.  
-testProject.cpp stress tests count sort and records the data in a csv file.  
-Two csv files are used due to a previous error.  
-Analyze.R generates graphs of the data which can be found in the Graphs directory.
+countSort.cpp: contains the count sort algorithm.  
+testProject.cpp: stress tests count sort and records the data in a csv file.  
 
 # R-Script
 
@@ -117,17 +116,18 @@ You need [R](https://rstudio-education.github.io/hopr/starting.html) for this pr
 
 ## Script-Usage
 
-The main purpose of the R script is to subset the data in [California_DDS_Expenditures.csv](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) and to generate graphs based on the subsetted data, the graphs can be found in the [Discrimination in the California Department of Defense.pdf](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) paper.
+The main purpose of the R script is to subset the data in the [data.csv](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) file and to generate graphs based on the subsetted data, the graphs can be found in the [Graphs](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) directory.
 
 ## Script-Example
 
 ### CMD
+
 ![EXAMPLE](examples/example1.png)
-![EXAMPLE](examples/example2.png)
 
 ### RStudio
-![EXAMPLE](examples/example3.png)
+
+WIP
 
 ## Script-Overview
 
-[Project.R](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Project.R): contains the R script used in the paper.  
+Analyze.R: generates graphs of the data which can be found in the Graphs directory.
