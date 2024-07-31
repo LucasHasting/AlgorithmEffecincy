@@ -3,10 +3,10 @@ Project was created in my Data Structures and Algorithms class.
 Project was done with the help of Ethan Nix and Krutivas Pradhan.  
 
 ## Table of Contents
-- [C++-Program](#installation)
-- [R-Script](#compile-the-program)
+- [C++-Program](#c++-programs)
+- [R-Script](#r-script)
 
-# C++ Programs
+# C++-Program
 
 ## Table of Contents
 - [Installation](#installation)
