@@ -3,22 +3,11 @@ Project was created in my Data Structures and Algorithms class.
 Project was done with the help of Ethan Nix and Krutivas Pradhan.  
 
 ## Table of Contents
+- [Project-Installation](#project-installation)
 - [C++-Program](#c++-program)
 - [R-Script](#r-script)
 
-# C++-Program
-
-## Table of Contents
-- [C++-Installation](#c++-installation)
-- [Compile-the-program](#compile-the-program)
-- [Execute-the-program](#execute-the-program)
-- [Program-Usage](#program-usage)
-- [Program-Example](#program-example)
-- [Program-Overview](#program-overview)
-
-## C++-Installation
-
-You need the [C++](https://sourceforge.net/projects/mingw/) language installed on your system, the program can be executed using the g++ compiler.
+## Project-Installation
 
 ### Option 1: using [git](https://git-scm.com/downloads)
 1. Clone the repository:
@@ -42,6 +31,20 @@ You need the [C++](https://sourceforge.net/projects/mingw/) language installed o
    ```sh
    cd /path/to/files
    ```
+
+# C++-Program
+
+## Table of Contents
+- [C++-Installation](#c++-installation)
+- [Compile-the-program](#compile-the-program)
+- [Execute-the-program](#execute-the-program)
+- [Program-Usage](#program-usage)
+- [Program-Example](#program-example)
+- [Program-Overview](#program-overview)
+
+## C++-Installation
+
+You need the [C++](https://sourceforge.net/projects/mingw/) language installed on your system, the program can be executed using the g++ compiler.
 
 ## Compile-the-program
 
@@ -95,27 +98,6 @@ Analyze.R generates graphs of the data which can be found in the Graphs director
 ## R-Installation
 
 You need [R](https://rstudio-education.github.io/hopr/starting.html) for this project, [RStudio](https://rstudio-education.github.io/hopr/starting.html) is recommended.
-
-### Option 1: using [git](https://git-scm.com/downloads)
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/LucasHasting/Applied-Statistics-Project.git
-    ```
-
-2. Navigate to the project directory:
-
-    ```sh
-    cd Applied-Statistics-Project
-    ```
-    
-### Option 2: without git
-1. Download the project as a zip file
-2. [Extract the zip file](https://www.wikihow.com/Unzip-a-File)
-3. go to the command line and run the following:
-   ```sh
-   cd /path/to/files
-   ```
 
 #### Run from the command line
 1. go to the command line and run the following:
