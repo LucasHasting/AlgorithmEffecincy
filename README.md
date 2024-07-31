@@ -43,7 +43,7 @@ You need the [C++](https://sourceforge.net/projects/mingw/) language installed o
    cd /path/to/files
    ```
 
-## Compile the program
+## Compile-the-program
 
 ### Option 1: using [Make](https://www.gnu.org/software/make/)
 Run the following:
@@ -57,7 +57,7 @@ Run the following:
 g++ maps.cpp driver.cpp -o count_sort
 ```
 
-## Execute the program
+## Execute-the-program
 
 ### Windows
 ```sh
@@ -69,10 +69,10 @@ count_sort.exe
 ./count_sort.out
 ```
 
-## Usage
+## Program-Usage
 The program is a command line, menu based, user interface. By entering the number associated with an option it will perform a certain operation. The program has multiple menus, the first being the main menu where you can sign in, create an account, or exit the program. When creating an account it asks for the username and password, and the password is hidden using *. Upon successfull login you have the option to change the accounts username and password, along with deleteing the account, or you can choose to sign out.
 
-## Example
+## Program-Example
 
 ![EXAMPLE](examples/example1.png)  
 ![EXAMPLE](examples/example2.png)  
@@ -92,7 +92,7 @@ Analyze.R generates graphs of the data which can be found in the Graphs director
 - [Script-Example](#script-example)
 - [Script-Overview](#script-program-overview)
 
-## Installation
+## R-Installation
 
 You need [R](https://rstudio-education.github.io/hopr/starting.html) for this project, [RStudio](https://rstudio-education.github.io/hopr/starting.html) is recommended.
 
@@ -133,11 +133,11 @@ You need [R](https://rstudio-education.github.io/hopr/starting.html) for this pr
 6. Click the run button (located at the top below the tabs)
 7. The graphs are located at the bottom right, the left and right arrows can be used to select a graph
 
-## Usage
+## Script-Usage
 
 The main purpose of the R script is to subset the data in [California_DDS_Expenditures.csv](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) and to generate graphs based on the subsetted data, the graphs can be found in the [Discrimination in the California Department of Defense.pdf](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) paper.
 
-## Example
+## Script-Example
 
 ### CMD
 ![EXAMPLE](examples/example1.png)
@@ -146,6 +146,6 @@ The main purpose of the R script is to subset the data in [California_DDS_Expend
 ### RStudio
 ![EXAMPLE](examples/example3.png)
 
-## Program-Overview
+## Script-Overview
 
 [Project.R](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Project.R): contains the R script used in the paper.  
