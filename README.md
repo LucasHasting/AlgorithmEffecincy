@@ -3,7 +3,12 @@ Project was created in my Data Structures and Algorithms class.
 Project was done with the help of Ethan Nix and Krutivas Pradhan.  
 
 ## Table of Contents
+- [C++-Program](#installation)
+- [R-Script](#compile-the-program)
 
+# C++ Programs
+
+## Table of Contents
 - [Installation](#installation)
 - [Compile-the-program](#compile-the-program)
 - [Execute-the-program](#execute-the-program)
@@ -49,7 +54,7 @@ make all
 ### Option 2: without Make
 Run the following:
 ```sh
-g++ maps.cpp driver.cpp -o map
+g++ maps.cpp driver.cpp -o count_sort
 ```
 
 ## Execute the program
@@ -77,3 +82,5 @@ countSort.cpp contains the count sort algorithm.
 testProject.cpp stress tests count sort and records the data in a csv file.  
 Two csv files are used due to a previous error.  
 Analyze.R generates graphs of the data which can be found in the Graphs directory.
+
+# R-Script
