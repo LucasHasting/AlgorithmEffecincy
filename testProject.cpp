@@ -13,6 +13,7 @@ File Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
 #include <time.h>
 #include <fstream>
 #include "countSort.cpp"
+#include "analysis_functions.cpp"
 using namespace std;
 
 /*
