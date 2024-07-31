@@ -10,6 +10,9 @@ reference 1: https://www.tutorialspoint.com/cplusplus-program-to-implement-count
 reference 2: https://www.programiz.com/dsa/counting-sort
 */
 
+#ifndef CS_CPP
+#define CS_CPP
+
 #include<iostream>
 using namespace std;
 
@@ -88,3 +91,5 @@ void countSort(T *array, int size) {
    delete [] output;
    delete [] count;
 }
+
+#endif

@@ -8,6 +8,13 @@ File Name: analysis_functions.cpp
 File Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
 */
 
+#include <iostream>
+#include <ctime>
+#include <time.h>
+#include <fstream>
+#include "countSort.cpp"
+using namespace std;
+
 /*
 Function Name: dataWrite
 Function Description: Appends the parameters to a file clalled data.csv
@@ -16,6 +23,10 @@ Outgoing: None
 Return: None
 Function Contribution: Krutivas Pradhan
 */
+
+#ifndef AF_CPP
+#define AF_CPP
+
 void dataWrite(string test_type, int size, int max, double time)
 {
     ofstream outfile;
@@ -125,3 +136,5 @@ double test(T *array, int size, int max, string type = "Random")
     float diff (float(t2) - float(t1));
     return diff / CLOCKS_PER_SEC;
 }
+
+#endif
