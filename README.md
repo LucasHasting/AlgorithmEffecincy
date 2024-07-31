@@ -3,20 +3,20 @@ Project was created in my Data Structures and Algorithms class.
 Project was done with the help of Ethan Nix and Krutivas Pradhan.  
 
 ## Table of Contents
-- [C++-Program](#c++-programs)
+- [C++-Program](#c++-program)
 - [R-Script](#r-script)
 
 # C++-Program
 
 ## Table of Contents
-- [Installation](#installation)
+- [C++-Installation](#c++-installation)
 - [Compile-the-program](#compile-the-program)
 - [Execute-the-program](#execute-the-program)
-- [Usage](#usage)
-- [Example](#example)
+- [Program-Usage](#program-usage)
+- [Program-Example](#program-example)
 - [Program-Overview](#program-overview)
 
-## Installation
+## C++-Installation
 
 You need the [C++](https://sourceforge.net/projects/mingw/) language installed on your system, the program can be executed using the g++ compiler.
 
@@ -87,10 +87,10 @@ Analyze.R generates graphs of the data which can be found in the Graphs director
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example](#example)
-- [Program-Overview](#program-overview)
+- [R-Installation](#r-installation)
+- [Script-Usage](#script-usage)
+- [Script-Example](#script-example)
+- [Script-Overview](#script-program-overview)
 
 ## Installation
 
