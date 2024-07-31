@@ -1,4 +1,14 @@
 /*
+Names: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+Course: CS 355
+Assignment: Assignment 7
+Date: 2/23/2023
+Program Description: Test the countingSort function
+File Name: analysis_functions.cpp
+File Contribution: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+*/
+
+/*
 Function Name: dataWrite
 Function Description: Appends the parameters to a file clalled data.csv
 Incoming: test_type, size, max, time
