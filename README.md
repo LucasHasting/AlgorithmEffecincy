@@ -78,6 +78,7 @@ The program runs a stress test on the Count Sort algorithm and records the resul
 
 ## Program-Example
 
+![EXAMPLE](examples/example1-1.png)
 ![EXAMPLE](examples/example1.png)
 
 # R-Script
@@ -113,6 +114,11 @@ You need [R](https://rstudio-education.github.io/hopr/starting.html) for this pr
 The main purpose of the R script is to subset the data in the [data.csv](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) file and to generate graphs based on the subsetted data, the graphs can be found in the [Graphs](https://github.com/LucasHasting/Applied-Statistics-Project/blob/main/Discrimination%20in%20the%20California%20Department%20of%20Defense.pdf) directory.
 
 ## Script-Example
+
+![EXAMPLE](examples/example1-1.png)
+![EXAMPLE](examples/example2.png)
+![EXAMPLE](examples/example3.png)
+![EXAMPLE](examples/example4.png)
 
 ### CMD
 
