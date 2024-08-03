@@ -74,7 +74,7 @@ count_sort.exe
 ```
 
 ## Program-Usage
-The program runs a stress test on the Count Sort algorithm and records the results in the [data.csv]() file.
+The program runs a stress test on the Count Sort algorithm and records the results in the [data.csv]() file. It uses "." to indicate a pass through a loop, or in other words, to indicate the programs progress. The program then indicates it is finished by displaying the word "done". The program can take several minutes to execute completely and it is recommended to not do anything else on the computer the program is running on until it is finished for best results.
 
 ## Program-Example
 
