@@ -115,7 +115,7 @@ The main purpose of the R script is to subset the data in the [data.csv](https:/
 
 ## Script-Example
 
-![EXAMPLE](examples/example1-1.png)
+![EXAMPLE](examples/example1-2.png)
 ![EXAMPLE](examples/example2.png)
 ![EXAMPLE](examples/example3.png)
 ![EXAMPLE](examples/example4.png)
