@@ -42,7 +42,6 @@ R and C++ are both needed for this project, see instructions below for both of t
 - [Execute-the-program](#execute-the-program)
 - [Program-Usage](#program-usage)
 - [Program-Example](#program-example)
-- [Program-Overview](#program-overview)
 
 ## C++-Installation
 
@@ -88,7 +87,6 @@ The program runs a stress test on the Count Sort algorithm and records the resul
 - [R-Installation](#r-installation)
 - [Script-Usage](#script-usage)
 - [Script-Example](#script-example)
-- [Script-Overview](#script-program-overview)
 
 ## R-Installation
 
