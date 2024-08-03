@@ -5,6 +5,7 @@ Project was created in my CS 355 (Data Structures and Algorithms) class. The prj
 - [Project-Installation](#project-installation)
 - [C++-Program](#c++-program)
 - [R-Script](#r-script)
+- [Project-Overview](#project-overview)
 
 ## Project-Installation
 
@@ -78,11 +79,7 @@ The program runs a stress test on the Count Sort algorithm and records the resul
 
 ## Program-Example
 
-WIP
-
-## Program-Overview
-countSort.cpp: contains the count sort algorithm.  
-testProject.cpp: stress tests count sort and records the data in a csv file.  
+![EXAMPLE](examples/example1.png)
 
 # R-Script
 
@@ -127,6 +124,8 @@ The main purpose of the R script is to subset the data in the [data.csv](https:/
 
 WIP
 
-## Script-Overview
+# Project-Overview
 
-Analyze.R: generates graphs of the data which can be found in the [Graphs]() directory.
+[countSort.cpp](): contains the count sort algorithm.  
+[testProject.cpp](): stress tests count sort and records the data in a csv file.  
+[Analyze.R](): generates graphs of the data which can be found in the [Graphs]() directory.
