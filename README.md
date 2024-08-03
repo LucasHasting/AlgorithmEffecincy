@@ -115,18 +115,15 @@ The main purpose of the R script is to subset the data in the [data.csv](https:/
 
 ## Script-Example
 
+### CMD
+
 ![EXAMPLE](examples/example1-2.png)
 ![EXAMPLE](examples/example2.png)
 ![EXAMPLE](examples/example3.png)
-![EXAMPLE](examples/example4.png)
-
-### CMD
-
-![EXAMPLE](examples/example1.png)
 
 ### RStudio
 
-WIP
+![EXAMPLE](examples/example4.png)
 
 # Project-Overview
 
